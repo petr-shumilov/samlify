@@ -25,9 +25,9 @@
   "contributors": [
     "Tony Ngan <tonynwk919@gmail.com>"
   ],
-  "author": "tngan",
+  "author": "Petr Shumilov",
   "repository": {
-    "url": "https://github.com/tngan/samlify",
+    "url": "https://github.com/petr-shumilov/samlify",
     "type": "git"
   },
   "license": "MIT",
