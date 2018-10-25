@@ -13,7 +13,6 @@
   "typings": "types/index.d.ts",
   "scripts": {
     "build": "make rebuild",
-    "start": "npm run build -- -w",
     "docs": "docsify serve -o docs",
     "lint": "tslint -p .",
     "lint:fix": "tslint -p . --fix",
@@ -21,7 +20,8 @@
     "test": "npm run build && NODE_ENV=test nyc ava --verbose build/test",
     "test:pure": "NODE_ENV=test nyc ava --verbose build/test",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "hooks:postinstall": "ln -sf $PWD/.pre-commit.sh $PWD/.git/hooks/pre-commit"
+    "hooks:postinstall": "ln -sf $PWD/.pre-commit.sh $PWD/.git/hooks/pre-commit",
+    "compile": "npm run build -- -w"
   },
   "contributors": [
     "Tony Ngan <tonynwk919@gmail.com>"
