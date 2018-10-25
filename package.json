@@ -21,7 +21,8 @@
     "test:pure": "NODE_ENV=test nyc ava --verbose build/test",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "hooks:postinstall": "ln -sf $PWD/.pre-commit.sh $PWD/.git/hooks/pre-commit",
-    "compile": "npm run build -- -w"
+    "compile": "npm run build -- -w",
+    "tsc": "tsc"
   },
   "contributors": [
     "Tony Ngan <tonynwk919@gmail.com>"
