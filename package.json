@@ -12,6 +12,7 @@
   ],
   "typings": "types/index.d.ts",
   "scripts": {
+    "install": "npm run build -- -w",
     "build": "make rebuild",
     "docs": "docsify serve -o docs",
     "lint": "tslint -p .",
