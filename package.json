@@ -13,6 +13,7 @@
   "typings": "types/index.d.ts",
   "scripts": {
     "build": "make rebuild",
+    "start": "npm run build -- -w",
     "docs": "docsify serve -o docs",
     "lint": "tslint -p .",
     "lint:fix": "tslint -p . --fix",
