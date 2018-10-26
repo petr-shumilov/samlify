@@ -152,8 +152,24 @@ const libSaml = () => {
   * @desc Default login request template
   * @type {LoginRequestTemplate}
   */
+  <saml2p:AuthnRequest 
+    xmlns:saml2p="urn:oasis:names:tc:SAML:2.0:protocol" 
+    AssertionConsumerServiceURL="https://..host../saml/SSO/alias/login.identity.cf-app.com" 
+    Destination="http://simplesamlphp.identity.cf-app.com/saml2/idp/SSOService.php" 
+    ForceAuthn="false" 
+    ID="a17j41337a9835i93h78hihc9a89j4b" 
+    IsPassive="false" IssueInstant="2017-05-03T21:16:15.989Z" 
+    ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" 
+    Version="2.0"
+>
+  <saml2:Issuer xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion">
+      Login.identity.cf-app.com
+  saml2:Issuer>
+  <saml2p:NameIDPolicy Format="urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress" />
+</saml2p:AuthnRequest>
+
   const defaultLoginRequestTemplate = {
-    context: '<saml2p:AuthnRequest xmlns:saml2p="urn:oasis:names:tc:SAML:2.0:protocol" ID="{ID}" Version="2.0" IssueInstant="{IssueInstant}" Destination="{Destination}" ForceAuthn="false" IsPassive="false" ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" AssertionConsumerServiceURL="{AssertionConsumerServiceURL}"><saml2:Issuer>{Issuer}</saml2:Issuer><saml2p:NameIDPolicy Format="{NameIDFormat}" AllowCreate="{AllowCreate}"/></saml2p:AuthnRequest>',
+    context: '<saml2p:AuthnRequest xmlns:saml2p="urn:oasis:names:tc:SAML:2.0:protocol" ID="{ID}" Version="2.0" IssueInstant="{IssueInstant}" Destination="{Destination}" ForceAuthn="false" IsPassive="false" ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" AssertionConsumerServiceURL="{AssertionConsumerServiceURL}"><saml2:Issuer xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion">{Issuer}</saml2:Issuer><saml2p:NameIDPolicy Format="{NameIDFormat}" AllowCreate="{AllowCreate}"/></saml2p:AuthnRequest>',
   };
   /**
   * @desc Default logout request template
