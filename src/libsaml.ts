@@ -153,7 +153,7 @@ const libSaml = () => {
   * @type {LoginRequestTemplate}
   */
   const defaultLoginRequestTemplate = {
-    context: '<saml2p:AuthnRequest ID="{ID}" Version="2.0" IssueInstant="{IssueInstant}" Destination="{Destination}" ForceAuthn="false" IsPassive="false" ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" AssertionConsumerServiceURL="{AssertionConsumerServiceURL}"><saml2:Issuer>{Issuer}</saml2:Issuer><saml2p:NameIDPolicy Format="{NameIDFormat}"/></saml2p:AuthnRequest>',
+    context: '<saml2p:AuthnRequest xmlns:saml2p="urn:oasis:names:tc:SAML:2.0:protocol" ID="{ID}" Version="2.0" IssueInstant="{IssueInstant}" Destination="{Destination}" ForceAuthn="false" IsPassive="false" ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" AssertionConsumerServiceURL="{AssertionConsumerServiceURL}"><saml2:Issuer>{Issuer}</saml2:Issuer><saml2p:NameIDPolicy Format="{NameIDFormat}" AllowCreate="{AllowCreate}"/></saml2p:AuthnRequest>',
   };
   /**
   * @desc Default logout request template
