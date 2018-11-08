@@ -125,6 +125,8 @@ async function postFlow(options): Promise<FlowResult> {
 
   const direction = libsaml.getQueryParamByType(parserType);
   const encodedRequest = body[direction];
+  console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+  console.log(JSON.stringify(body));
 
   let samlContent = String(base64Decode(encodedRequest));
 
