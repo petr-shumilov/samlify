@@ -121,7 +121,7 @@ async function postFlow(options): Promise<FlowResult> {
     checkSignature = true
   } = options;
 
-  const { body, relayState = "" } = request;
+  const { body, RelayState = "" } = request;
   
   const direction = libsaml.getQueryParamByType(parserType);
   const encodedRequest = body[direction];
@@ -182,7 +182,7 @@ async function postFlow(options): Promise<FlowResult> {
   const parseResult = {
     samlContent: samlContent,
     extract: extract(samlContent, extractorFields),
-    relayState: relayState,
+    relayState: RelayState,
   };
 
   // validation part
